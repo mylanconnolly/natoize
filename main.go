@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 	"strings"
-	"unicode"
 )
 
 var natoLetters = map[rune]string{
@@ -72,58 +71,58 @@ func PhoneticFast(str string) string {
 	builder := strings.Builder{}
 
 	for _, s := range str {
-		switch unicode.ToLower(s) {
-		case 'a':
+		switch s {
+		case 'a', 'A':
 			builder.WriteString("alfa ")
-		case 'b':
+		case 'b', 'B':
 			builder.WriteString("bravo ")
-		case 'c':
+		case 'c', 'C':
 			builder.WriteString("charlie ")
-		case 'd':
+		case 'd', 'D':
 			builder.WriteString("delta ")
-		case 'e':
+		case 'e', 'E':
 			builder.WriteString("echo ")
-		case 'f':
+		case 'f', 'F':
 			builder.WriteString("foxtrot ")
-		case 'g':
+		case 'g', 'G':
 			builder.WriteString("golf ")
-		case 'h':
+		case 'h', 'H':
 			builder.WriteString("hotel ")
-		case 'i':
+		case 'i', 'I':
 			builder.WriteString("india ")
-		case 'j':
+		case 'j', 'J':
 			builder.WriteString("juliet ")
-		case 'k':
+		case 'k', 'K':
 			builder.WriteString("kilo ")
-		case 'l':
+		case 'l', 'L':
 			builder.WriteString("lima ")
-		case 'm':
+		case 'm', 'M':
 			builder.WriteString("mike ")
-		case 'n':
+		case 'n', 'N':
 			builder.WriteString("november ")
-		case 'o':
+		case 'o', 'O':
 			builder.WriteString("oscar ")
-		case 'p':
+		case 'p', 'P':
 			builder.WriteString("papa ")
-		case 'q':
+		case 'q', 'Q':
 			builder.WriteString("quebec ")
-		case 'r':
+		case 'r', 'R':
 			builder.WriteString("romeo ")
-		case 's':
+		case 's', 'S':
 			builder.WriteString("sierra ")
-		case 't':
+		case 't', 'T':
 			builder.WriteString("tango ")
-		case 'u':
+		case 'u', 'U':
 			builder.WriteString("uniform ")
-		case 'v':
+		case 'v', 'V':
 			builder.WriteString("victor ")
-		case 'w':
+		case 'w', 'W':
 			builder.WriteString("whiskey ")
-		case 'x':
+		case 'x', 'X':
 			builder.WriteString("xray ")
-		case 'y':
+		case 'y', 'Y':
 			builder.WriteString("yankee ")
-		case 'z':
+		case 'z', 'Z':
 			builder.WriteString("zulu ")
 		case '1':
 			builder.WriteString("one ")
