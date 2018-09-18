@@ -67,6 +67,7 @@ func Phonetic(str string) (line string) {
 	return line
 }
 
+// PhoneticFast is the faster version of natoize, using a switch.
 func PhoneticFast(str string) string {
 	builder := strings.Builder{}
 
