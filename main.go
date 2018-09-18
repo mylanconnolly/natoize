@@ -47,18 +47,21 @@ var natoLetters = map[rune]string{
 
 func main() {
 	for _, arg := range os.Args[1:] {
-		var line string
-
-		for _, r := range strings.ToLower(arg) {
-			nato, found := natoLetters[r]
-
-			if !found {
-				line += string(r)
-			} else {
-				line += nato
-			}
-			line += " "
-		}
-		fmt.Println(line)
+		fmt.Println(Phoenetic(arg))
 	}
+}
+
+// Phoenetic is the abstraction of the natoize logic.
+func Phoenetic(str string) (line string) {
+	for _, r := range strings.ToLower(str) {
+		nato, found := natoLetters[r]
+
+		if !found {
+			line += string(r)
+		} else {
+			line += nato
+		}
+		line += " "
+	}
+	return line
 }
